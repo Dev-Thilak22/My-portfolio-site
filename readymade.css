@@ -1,0 +1,413 @@
+:root{
+     --accent-color: #00ADB5;        /* Buttons, Links, Highlights */
+}
+
+
+/* Preloader Styles */
+
+/*  Fullscreen Preloader Background */
+#preloader-thilak2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1a1a1a;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+} 
+
+/* Hide main content initially */
+#main-content-thilak2 {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* ✨ Unique Loader Design */
+.loader-thilak2 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  background: transparent;
+  border: 3px solid rgba(0, 102, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color:rgb(0, 242, 255);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgb(0, 242, 255);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+}
+
+.loader-thilak2::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid rgb(0, 229, 255);
+  border-right: 3px solid rgb(0, 229, 255);
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+
+.loader-thilak2 span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+
+.loader-thilak2 span::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background:rgb(0, 225, 255);
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px 5px rgb(0, 221, 255);
+} 
+
+
+@keyframes animateC {
+  0% { 
+    transform: rotate(0deg); 
+  }
+  100% { 
+    transform: rotate(360deg); 
+  }
+}
+
+@keyframes animate {
+  0% { 
+    transform: rotate(45deg); 
+  }
+  100% { 
+    transform: rotate(405deg); 
+  }
+}
+
+
+/* Preloader Styles */
+
+
+
+.thilak-dl-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#thilakDownloadButton {
+  background-color: var( --accent-color);
+  border: 2px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5px;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+#thilakDownloadButton:hover {
+  box-shadow: 0 0 5px var(--accent-color);
+  transform: translateY(-2px);
+}
+
+#thilakDownloadButton i {
+  color: #fff;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+#thilakDownloadButton span {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+#thilakDownloadButton.thilak-loading i {
+  animation: thilak-spin 1s linear infinite;
+}
+
+#thilakDownloadButton.thilak-success {
+  background: linear-gradient(135deg, #4caf50, #66bb6a);
+  box-shadow: 0 0 5px #4caf50, 0 0 5px #66bb6a;
+}
+
+#thilakDownloadButton.thilak-success i {
+  animation: none;
+}
+
+@keyframes thilak-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+/* Hero buttons */
+
+.user-profile {
+  width: 180px;;
+  height: 51px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: linear-gradient(
+    to bottom right,
+    #2e8eff 0%,
+    rgba(46, 142, 255, 0) 30%
+  );
+  background-color: rgba(46, 142, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile:hover,
+.user-profile:focus {
+  background-color: rgba(46, 142, 255, 0.7);
+  box-shadow: 0 0 10px rgba(46, 142, 255, 0.5);
+  outline: none;
+}
+
+.user-profile-inner {
+  width: 180px;
+  height: 47px;
+  border-radius: 13px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.user-profile-inner svg {
+  width: 27px;
+  height: 27px;
+  fill: #fff;
+}
+/* Hero buttons */
+
+
+/* back to top button */
+
+.backto-top-button{
+  display: flex;
+  align-items: end;
+  margin-right: 25px;
+}
+
+.Btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(27, 27, 27);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+}
+
+.svgIcon {
+  fill: var(--accent-color);
+  rotate: 180deg;
+}
+
+.icon2 {
+  width: 18px;
+  height: 5px;
+  border-bottom: 2px solid var(--accent-color);
+  border-left: 2px solid var(--accent-color);
+  border-right: 2px solid var(--accent-color);
+}
+
+.Btn:hover {
+  background-color: var(--accent-color);
+  transition-duration: .3s;
+}
+
+.Btn:hover .icon2 {
+  border-bottom: 2px solid rgb(235, 235, 235);
+  border-left: 2px solid rgb(235, 235, 235);
+  border-right: 2px solid rgb(235, 235, 235);
+}
+
+.Btn:hover .svgIcon {
+  fill: rgb(255, 255, 255);
+  animation: slide-in-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* back to top button */
+
+/* connection */
+
+#offline-page {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color:rgb(46, 46, 46);
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+  }
+
+/* connection */
+
+/* connection animation */
+
+.full-loader {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.truckWrapper {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  overflow-x: hidden;
+}
+/* truck upper body */
+.truckBody {
+  width: 130px;
+  height: fit-content;
+  margin-bottom: 6px;
+  animation: motion 1s linear infinite;
+}
+/* truck suspension animation*/
+@keyframes motion {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* truck's tires */
+.truckTires {
+  width: 130px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px 0px 15px;
+  position: absolute;
+  bottom: 0;
+}
+
+.truckTires svg {
+  width: 24px;
+}
+
+.road {
+  width: 100%;
+  height: 1.5px;
+  background-color:rgb(255, 255, 255);
+  position: relative;
+  bottom: 0;
+  align-self: flex-end;
+  border-radius: 3px;
+}
+.road::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color:hsl(0, 0.00%, 100.00%);
+  right: -50%;
+  border-radius: 3px;
+  animation: roadAnimation 1.4s linear infinite;
+  border-left: 10px solid white;
+}
+.road::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background-color: #282828;
+  right: -65%;
+  border-radius: 3px;
+  animation: roadAnimation 1.4s linear infinite;
+  border-left: 4px solid white;
+}
+
+.lampPost {
+  position: absolute;
+  bottom: 0;
+  right: -90%;
+  height: 90px;
+  animation: roadAnimation 1.4s linear infinite;
+}
+
+@keyframes roadAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-350px);
+  }
+}
+
+/* connection animation */
+
+
+.class{
+  background-color: rgb(0, 138, 138);
+}
+
